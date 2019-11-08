@@ -6,7 +6,7 @@ const Light = require("./models/light");
 
 require("dotenv").config();
 
-const uri = `mongodb+srv://ryan:${process.env.MONGODB_ADMIN_PASSWORD}@cluster-gb2hu.mongodb.net/myDB?retryWrites=true&w=majority`;
+const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
