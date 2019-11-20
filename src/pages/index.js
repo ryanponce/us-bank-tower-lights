@@ -32,7 +32,11 @@ const IndexPage = ({ data }) => {
         }}
       >
         {nodes.map(node => (
-          <Night key={node.id} colors={node.data.colors} />
+          <Night
+            key={node.id}
+            colors={node.data.colors}
+            purpose={node.data.purpose}
+          />
         ))}
       </div>
     </Layout>

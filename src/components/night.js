@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const night = ({ colors }) => {
-  return <Night colors={colors} />;
+const night = ({ colors, purpose }) => {
+  return <Night colors={colors} title={purpose} />;
 };
 
 night.propTypes = {
-  colors: PropTypes.arrayOf(PropTypes.string).isRequired
+  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  purpose: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default night;
