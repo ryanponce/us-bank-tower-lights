@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `US Bank Tower Lights`,
-    description: `History of the light color changes on the US Bank Tower's crown in Downtown Los Angeles, California.`,
+    description: `Timeline of the crown lights of the US Bank Tower in Los Angeles, California.`,
     author: `Ryan Ponce`
   },
   plugins: [

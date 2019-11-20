@@ -1,7 +1,7 @@
 {
   "name": "us-bank-tower-lights",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Timeline of the crown lights of the US Bank Tower in Los Angeles, California.",
   "version": "0.1.0",
   "author": "Ryan Ponce <ryan@ponce.la>",
   "dependencies": {
