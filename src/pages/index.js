@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -13,11 +12,29 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Nights>
+
+      <p css={{ fontSize: "1.5rem", lineHeight: 1.5, marginTop: "32px" }}>
+        Occasionally, the US Bank Tower in Los Angeles, California will change
+        the lights on the crown. Below is a list of all of the changes that have
+        happened and what cause the lights are associated with.
+      </p>
+
+      <h2 css={{ fontSize: "2rem", fontWeight: 900, marginTop: "64px" }}>
+        Nights
+      </h2>
+
+      <div
+        css={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, 64px)",
+          gridGap: "32px",
+          marginTop: "32px"
+        }}
+      >
         {nodes.map(node => (
           <Night key={node.id} colors={node.data.colors} />
         ))}
-      </Nights>
+      </div>
     </Layout>
   );
 };
@@ -55,11 +72,3 @@ IndexPage.propTypes = {
 };
 
 export default IndexPage;
-
-const Nights = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 64px);
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-  padding-left: 0;
-`;
