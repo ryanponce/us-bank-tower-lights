@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { motion } from "framer-motion";
 
 import Header from "./header";
 
@@ -33,11 +34,27 @@ const Layout = ({ children }) => {
 
       <Header siteTitle={data.site.siteMetadata.title} />
 
-      <main css={{ gridArea: "main", padding: "0 32px" }}>{children}</main>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.5,
+          duration: 1
+        }}
+        dela
+        css={{ gridArea: "main", padding: "0 32px" }}
+      >
+        {children}
+      </motion.main>
 
-      <footer css={{ gridArea: "footer", padding: "0 32px 32px" }}>
+      <motion.footer
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        css={{ gridArea: "footer", padding: "0 32px 32px" }}
+      >
         Made in Los Angeles by Ryan Ponce
-      </footer>
+      </motion.footer>
     </div>
   );
 };
